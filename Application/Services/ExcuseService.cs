@@ -23,4 +23,20 @@ public class ExcuseService(
         var randomExcuse = excuses[randomProvider.Next(excuses.Count)];
         return randomExcuse;
     }
+
+    public async Task<Excuse> RegisterExcuseScore(int excuseId, bool succeeded)
+    {
+        var excuse = await excuseRepository.GetByIdAsync(excuseId);
+
+        if (excuse == null)
+        { 
+            throw new KeyNotFoundException($"Excuse not found with id {excuseId}");
+        }
+
+        // Add or substract from score
+        // Todo -> integer overflow/underflow handling
+        excuse.Score.Value += succeeded ? 1 : -1;
+        
+        return await excuseRepository.UpdateExcuse(excuse);
+    }
 }

@@ -28,11 +28,7 @@ builder.Services.AddScoped<IRandomProvider, RandomProvider>();
 
 var app = builder.Build();
 
-app.MapControllerRoute(
-    name: "default", // Route name
-    pattern: "api/excuse/{action=Get}/{id?}", // Pattern for the route
-    defaults: new { controller = "Excuse" } // Controller to use
-);
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheGreatExcusesApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b71f78be4208ee8a69372c348e34c9f5460c0928")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheGreatExcusesApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheGreatExcusesApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
