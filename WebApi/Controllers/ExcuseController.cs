@@ -15,7 +15,7 @@ public class ExcuseController(IExcuseService excuseService) : ControllerBase
         return Ok(excuse);
     }
     
-    [HttpPost("{excuseId}/{succeeded}")]
+    [HttpPost("{excuseId}/score/{succeeded}")]
     public async Task<IActionResult> PostExcuseScore(int excuseId, bool succeeded)
     {
         var excuse = await excuseService.RegisterExcuseScore(excuseId, succeeded);
